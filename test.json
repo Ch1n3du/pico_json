@@ -1,0 +1,17 @@
+{
+  "name": "lucid-fun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lucid-cardano": "^0.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.40"
+  }
+}
