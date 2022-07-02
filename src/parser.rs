@@ -70,13 +70,13 @@ peg::parser!(
 
         rule string_literal() -> String
           // = "\"" s:[^ '"']* !['\\']['\"'] {
-          = "\"" s:[^ '"']* !['\\']['\"'] {
+          = "\"" s:[^ '"']* "\"" {
             String::from_iter(s)
         }
 
         rule number_literal() -> i64
           = n:$(['0'..='9']+) {?
-            n.parse().or(Err("Error parsing number literal."))
+            n.parse::<i64>().or(Err("Error parsing number literal."))
         }
 
         rule _ = [' ' | '\n']

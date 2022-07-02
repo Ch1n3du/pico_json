@@ -67,8 +67,8 @@ impl Display for JsonArray {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut acc = match self.items.len() {
             0 => String::from("["),
-            1 => String::from(format!("[{}", self.items[0])),
-            _ => String::from(format!("[ {}", self.items[0]))
+            1 => format!("[{}", self.items[0]),
+            _ => format!("[ {}", self.items[0]),
         };
 
         for elem in self.items.iter() {
